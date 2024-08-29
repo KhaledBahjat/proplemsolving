@@ -1,15 +1,31 @@
+#include <cmath>
 #include <bits/stdc++.h>
 using namespace std;
+
+
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/assoc_container.hpp>
+namespace __gnu_pbds{
+    typedef tree<long long,
+            null_type,
+            less<long long>,
+    rb_tree_tag,
+    tree_order_statistics_node_update> ordered_set; 
+}
+using namespace __gnu_pbds;
+
+
 #define NoSt0n_on_da_code std::ios::sync_with_stdio(0), std::cin.tie(0), std::cout.tie(0);
 
 typedef long long ll;
 
 typedef pair<int, int> pi;
+typedef pair<int, pi> p3i;
 
 typedef pair<ll, ll> pll;
 
 typedef vector<int> vi;
-typedef vector<pi> vpi;
+typedef vector<pi> v2i;
 
 typedef vector<string> vs;
 typedef vector<bool> vb;
@@ -53,21 +69,39 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
         cout << i << " ";
 #define el "\n";
 
+
+
 void Do_it(int TC){
-    int a, b;
-    cin >> a >> b;
-    set<int> st;
-    st.insert(a);
-    st.insert(b);
-    F1R(i,3){
-        if(st.find(i)==st.end())
-            return void(cout << i);
+    ordered_set st;
+    int q;
+    cin >> q;
+    while(q--){
+        char c;
+        cin >> c;
+        int x;
+        cin >> x;
+        if(c=='I')
+            st.insert(x);
+            else if (c=='D'){
+                if(st.find(x)!=st.end())
+                    st.erase(x);
+            }
+            else if(c=='C')
+                cout << st.order_of_key(x) << '\n';
+                else {
+                    if(x>st.size())
+                        cout << "invalid";
+                        else
+                            cout << *st.find_by_order(x - 1);
+                            cout << '\n';
+                }
     }
 }
 
+
+
 signed main(){
-    NoSt0n_on_da_code 
-    int _ = 1;
+    NoSt0n_on_da_code int _ = 1;
     // cin >> _;
     for (int __ = 1; __ <= _; __++){
         // cout << "Case #" << __ << " : ";

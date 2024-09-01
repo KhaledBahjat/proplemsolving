@@ -73,14 +73,27 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 
 
 void Do_it(int TC){
+    int a, b;
+    cin >> a >> b;
+    if (a&1)
+        cout << "NO";
+    else{
+        if(a != 0)
+            cout << "YES";
+        else{
+            if(b%2==0)
+                cout << "YES";
+            else
+                cout << "NO";
+        }
+    }
+
 }
-
-
 
 signed main(){
     Khaled
     int _ = 1;
-    // cin >> _;
+    cin >> _;
     for (int __ = 1; __ <= _; __++){
         // cout << "Case #" << __ << " : ";
         Do_it(__);

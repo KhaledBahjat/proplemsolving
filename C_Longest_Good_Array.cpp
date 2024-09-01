@@ -54,7 +54,7 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
     while (i_t++ < t)
 #define SetPre(n, x) cout << fixed << setprecision(n) << x
 
-// #define int long long
+#define int long long
 
 #define FOR(i, a, b) for (int i = a; i <= b; i++)
 #define F0R(i, a) for (int i = 0; i < a; i++)
@@ -73,6 +73,14 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 
 
 void Do_it(int TC){
+    int l, r;
+    cin >> l >> r;
+
+    int dif = r - l;
+    int k = (1 + sqrt(1 + 8 * dif)) / 2;
+
+    cout << k;
+
 }
 
 
@@ -80,7 +88,7 @@ void Do_it(int TC){
 signed main(){
     Khaled
     int _ = 1;
-    // cin >> _;
+    cin >> _;
     for (int __ = 1; __ <= _; __++){
         // cout << "Case #" << __ << " : ";
         Do_it(__);

@@ -54,7 +54,7 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
     while (i_t++ < t)
 #define SetPre(n, x) cout << fixed << setprecision(n) << x
 
-// #define int long long
+#define int long long
 
 #define FOR(i, a, b) for (int i = a; i <= b; i++)
 #define F0R(i, a) for (int i = 0; i < a; i++)
@@ -73,6 +73,15 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 
 
 void Do_it(int TC){
+    int n;
+    cin >> n;
+    vector<int> p(n);
+    vector<int> F(n, 0);
+    vector<bool>visited(n, false);
+    string s;
+    for(auto &i:p)
+        cin >> i;
+        
 }
 
 

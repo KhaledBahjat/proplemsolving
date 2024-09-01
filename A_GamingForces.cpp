@@ -73,6 +73,15 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 
 
 void Do_it(int TC){
+        int n;
+        cin >> n;
+        vi v (n);
+        int ans = 0;
+        for ( auto & it : v ) {
+            cin >> it;
+            ans += it == 1;
+        }
+        cout << n - ans / 2;
 }
 
 
@@ -80,7 +89,7 @@ void Do_it(int TC){
 signed main(){
     Khaled
     int _ = 1;
-    // cin >> _;
+    cin >> _;
     for (int __ = 1; __ <= _; __++){
         // cout << "Case #" << __ << " : ";
         Do_it(__);

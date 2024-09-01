@@ -69,18 +69,42 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 #define el "\n";
 
 
-
-
-
-void Do_it(int TC){
+bool squar(int n, string s) {
+    int k = sqrt(n);
+    if (k * k != n) {
+        return false;
+    }
+    for (int i = 0; i < n; ++i) {
+        int row = i / k;
+        int col = i % k;
+        if (row == 0 || row == k-1 || col == 0 || col == k-1) {
+            if (s[i] != '1') {
+                return false;
+            }
+        } else {
+            if (s[i] != '0') {
+                return false;
+            }
+        }
+    }
+    
+    return true;
 }
 
 
 
+void Do_it(int TC){
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    cout << (squar(n, s) ? "Yes" : "No");
+}
+
 signed main(){
     Khaled
     int _ = 1;
-    // cin >> _;
+    cin >> _;
     for (int __ = 1; __ <= _; __++){
         // cout << "Case #" << __ << " : ";
         Do_it(__);

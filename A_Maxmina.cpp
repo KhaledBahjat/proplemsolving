@@ -14,7 +14,7 @@ namespace __gnu_pbds{
 using namespace __gnu_pbds;
 
 #define iter iterator
-#define Khaled std::ios::sync_with_stdio(0), std::cin.tie(0), std::cout.tie(0);
+#define NoSt0n_on_da_code std::ios::sync_with_stdio(0), std::cin.tie(0), std::cout.tie(0);
 
 typedef long long ll;
 
@@ -73,14 +73,24 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 
 
 void Do_it(int TC){
+    int n, k;
+    cin >> n >> k;
+    vi v(n);
+    bool ok = false;
+    cin(v);
+    for (auto &i : v){
+        if(i==1)
+            ok = true;
+    }
+    cout << (ok ? "YES" : "NO");
 }
 
 
 
 signed main(){
-    Khaled
+    NoSt0n_on_da_code 
     int _ = 1;
-    // cin >> _;
+    cin >> _;
     for (int __ = 1; __ <= _; __++){
         // cout << "Case #" << __ << " : ";
         Do_it(__);

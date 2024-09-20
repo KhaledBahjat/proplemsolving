@@ -80,7 +80,7 @@ void NoSt0n_ ( int tc );
 signed main ( ) {
   Khaled
   int _ = 1;
-//   cin >> _;
+  cin >> _;
   for (int __ = 1; __ <= _; __++){
     // cout << "Case #" << __ << " : ";
     NoSt0n_(__);
@@ -96,5 +96,8 @@ void NoSt0n_ ( int tc ) {
   int a, b, c;
   cin >> a >> b >> c;
   int ans = min(b, c);
-  cout << (ans + a - 1) / ans;
+  if(a%ans==0){
+    cout << a / ans;
+  }else
+    cout << a / ans + 1;
 }

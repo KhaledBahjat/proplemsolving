@@ -2,37 +2,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include <ext/pb_ds/tree_policy.hpp>
-#include <ext/pb_ds/assoc_container.hpp>
-namespace __gnu_pbds{
-    typedef tree<long long,
-            null_type,
-            less<long long>,
-    rb_tree_tag,
-    tree_order_statistics_node_update> ordered_set; 
+
+#define Khaled  ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+inline void IN_OU(){
+
 }
-using namespace __gnu_pbds;
-
-
-#define NoSt0n_on_da_code std::ios::sync_with_stdio(0), std::cin.tie(0), std::cout.tie(0);
-
 typedef long long ll;
 
-typedef pair<int, int> pi;
-typedef pair<int, pi> p3i;
+typedef pair< int , int > pi;
+typedef pair< int , pi > p3i;
 
-typedef pair<ll, ll> pll;
+typedef pair< ll , ll > pll;
 
-typedef vector<int> vi;
-typedef vector<pi> v2i;
+typedef vector< int > vi;
+typedef vector< pi > v2i;
 
-typedef vector<string> vs;
-typedef vector<bool> vb;
+typedef vector< string > vs;
+typedef vector< bool > vb;
 
-typedef vector<vi> vvi;
+typedef vector< vi > vvi;
 
-typedef priority_queue<int> pq_max;
-typedef priority_queue<int, vi, greater<int>> pq_min;
+typedef priority_queue< int > pq_max;
+typedef priority_queue< int , vi , greater< int > > pq_min;
 
 #define MP make_pair
 #define PB push_back
@@ -66,37 +57,44 @@ typedef priority_queue<int, vi, greater<int>> pq_min;
 #define cout(v)      \
     for (auto i : v) \
         cout << i << " ";
-#define el "\n";
+
+#define el '\n'
 
 
 
 
 
-void Do_it(int TC){
+
+
+
+void NoSt0n_ ( int tc ){
     string s;
     cin >> s;
-    set<char> st;
-    F0R(i,sz(s)){
-        st.insert(s[i]);
-    }
-    cout << (sz(st) & 1 ? "IGNORE HIM!" : "CHAT WITH HER!");
+    int cnt = 0;
+    sort(all(s));
+    for (int i = 0; i < sz(s); i++)
+    if(s[i]==s[i+1])
+            cnt++;
+    int ans = sz(s) - cnt;
+    cout << (ans & 1 ? "IGNORE HIM!" : "CHAT WITH HER!");
 }
 
 
 
-signed main(){
-    NoSt0n_on_da_code 
-    int _ = 1;
-    // cin >> _;
-    for (int __ = 1; __ <= _; __++){
-        // cout << "Case #" << __ << " : ";
-        Do_it(__);
-        if (__ < _){
-            cout << '\n';
-            // cout << '\n';
-        }
+
+signed main ( ) {
+  Khaled
+  IN_OU();
+  int _ = 1;
+//   cin >> _;
+  for (int __ = 1; __ <= _; __++){
+    // cout << "Case #" << __ << " : ";
+    NoSt0n_(__);
+    if (__ < _){
+      cout << '\n';
+    }
     }
     return 0;
 }
-// I Can Do It
-// Fight not to be the Winner,but to be the last one to lose
+
+/*=================================== NoSt0n_ =============================*/
